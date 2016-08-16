@@ -1,0 +1,22 @@
+PODS:
+  - 1PasswordExtension (1.8.2)
+  - Alamofire (3.4.1)
+  - BTLabel (1.2.1)
+  - LFLoginController (0.2.3):
+    - 1PasswordExtension (= 1.8.2)
+  - SVProgressHUD (2.0.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - BTLabel (~> 1.2)
+  - LFLoginController (~> 0.2.3)
+  - SVProgressHUD (~> 2.0)
+
+SPEC CHECKSUMS:
+  1PasswordExtension: 303f2b7bbf6dc19ede3090bd6b5987530648d687
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  BTLabel: 2ea99b620e9cdf6a5546b1f5292f2a04e50d4dbe
+  LFLoginController: d925f6c8dd83b21c61f2b5816d3a0ea6dfe3a711
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+
+COCOAPODS: 0.39.0

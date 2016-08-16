@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pe1-dJ-5fg">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iLikesInsta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50196078431372548" green="0.0" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LkL-JQ-XmE"/>
+                    <connections>
+                        <segue destination="1rG-YN-XCX" kind="show" id="hnO-Tl-ROO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="-343.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pON-RE-jAA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pe1-dJ-5fg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mBx-iB-FB0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="i1Q-se-b1l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0L6-rR-sl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145.5" y="-343.5"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="NhS-Ty-pGa">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="1rG-YN-XCX" customClass="MainViewController" customModule="iLikesInsta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="049-6q-7ze"/>
+                        <viewControllerLayoutGuide type="bottom" id="mC6-qs-35l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nf0-Fs-6o9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f1t-AM-0wi">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f1t-AM-0wi" firstAttribute="top" secondItem="049-6q-7ze" secondAttribute="bottom" id="6r0-vb-NpS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f1t-AM-0wi" secondAttribute="trailing" constant="-20" id="sRP-QP-OXa"/>
+                            <constraint firstItem="f1t-AM-0wi" firstAttribute="leading" secondItem="Nf0-Fs-6o9" secondAttribute="leadingMargin" constant="-20" id="tQC-PV-2se"/>
+                            <constraint firstItem="mC6-qs-35l" firstAttribute="top" secondItem="f1t-AM-0wi" secondAttribute="bottom" id="x0s-tc-Irr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="f1t-AM-0wi"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="x0s-tc-Irr"/>
+                                <exclude reference="6r0-vb-NpS"/>
+                                <exclude reference="sRP-QP-OXa"/>
+                                <exclude reference="tQC-PV-2se"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="f1t-AM-0wi"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="x0s-tc-Irr"/>
+                                <include reference="6r0-vb-NpS"/>
+                                <include reference="sRP-QP-OXa"/>
+                                <include reference="tQC-PV-2se"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="rssListView" destination="f1t-AM-0wi" id="Aep-kG-3xl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNy-rW-AQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="-343.5"/>
+        </scene>
+    </scenes>
+</document>
